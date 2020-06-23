@@ -60,8 +60,8 @@
 <script>
 import axios from "axios";
 import $ from 'jquery'
-const API_KEY = "AIzaSyDq251SEuFTbzlAFosz3mqXb5XiBA94e4o";
-const API_URL = "https://www.googleapis.com/youtube/v3/search";
+const API_KEY = process.env.VUE_APP_API_KEY
+const API_URL = process.env.VUE_APP_API_URL
 
 export default {
   name: "MovieModalDetail",
@@ -86,7 +86,6 @@ export default {
 
     getTrailer() {
       const title = this.movie.title_en;
-      console.log(title)
       axios
         .get(API_URL, {
           params: {
@@ -102,7 +101,6 @@ export default {
           this.video = response.data.items[0];
           this.iframeSrc = `http://www.youtube.com/embed/${this.video.id.videoId}`
           this.tempSrc = this.iframeSrc
-          console.log(this.iframeSrc)
         })
         .catch(error => {
           console.log(error);
