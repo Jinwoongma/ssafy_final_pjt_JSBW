@@ -1,0 +1,17 @@
+venv/
+
+node_modules/
+
+*.sqlite3
+
+*.bak
+
+.env
+
+*.pyc
+
+myvenv
+
+__pycache__
+
+local_settings.py
