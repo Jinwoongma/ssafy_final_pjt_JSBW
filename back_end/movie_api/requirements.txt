@@ -20,7 +20,7 @@ idna==2.9
 pbr==5.4.5
 psycopg2==2.8.5
 psycopg2-binary==2.8.5
-PyJWT==1.7.1
+PyJWT==2.4.0
 python-decouple==3.3
 pytz==2020.1
 requests==2.23.0
